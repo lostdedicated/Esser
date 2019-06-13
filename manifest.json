@@ -2,7 +2,7 @@
     "background_page" : "background.html", 
     "content_scripts" : [
         {
-        	"css": [ "css/fonts.css", "css/sawarabi.css", "css/codes.css", "css/sidebar.css", "css/footer.css" ],
+        	"css": [ "css/codes.css", "css/sidebar.css", "css/footer.css" ],
             "js":[ "esser.user.js" ], 
             "matches":[ "*://game.granbluefantasy.jp/*", "*://gbf.game.mbga.jp/*" ], 
             "run_at":"document_start"  

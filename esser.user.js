@@ -22,3 +22,5 @@
     }
 )
 ();
+// jp fonts
+document.documentElement.lang = "ja"
