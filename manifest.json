@@ -2,7 +2,7 @@
     "background_page" : "background.html", 
     "content_scripts" : [
         {
-        	"css": [ "css/codes.css", "css/sidebar.css", "css/footer.css" ],
+        	"css": [ "css/codes.css", "css/sidebar.css", "css/footer.css", "css/coop.css" ],
             "js":[ "esser.user.js" ], 
             "matches":[ "*://game.granbluefantasy.jp/*", "*://gbf.game.mbga.jp/*" ], 
             "run_at":"document_start"  
@@ -12,5 +12,5 @@
     "name" : "Esser", 
     "permissions" : [ "*://game.granbluefantasy.jp/*", "*://gbf.game.mbga.jp/*" ],
     "manifest_version": 2,
-    "version" : "1.2"
+    "version" : "1.3"
 }
