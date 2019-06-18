@@ -1,0 +1,47 @@
+/* selectable IDs */
+.txt-info-content, .prt-battle-id 
+	{
+		-moz-user-select: text;
+		-khtml-user-select: text;
+		-webkit-user-select: text;
+		-ms-user-select: text;
+		user-select: text;
+	}
+/*coop icons */
+.prt-wanted-room.normal_lobby
+	{
+		height: 92px !important;
+	}
+.prt-owner-info 
+	{
+		overflow:inherit !important;
+	}
+/*hide footer settings */
+.cnt-treasure-footer
+	{
+		height: 40px !important;
+	}
+.prt-treasure-footer-setting
+	{
+		display: none;
+	}
+/* rp progress  display */
+.prt-rankup
+	{
+		font-size: 8px;
+	}
+/* hide sidebars */
+#cnt-submenu-navi-vertical, ._180vpDZNW_DakLLTgpbnoB
+	{
+		display: none;
+	}
+.VSPSbtccLr1T90zw6B9_K
+	{
+		margin-left: -63px;
+	}
+/* hide scrollbar */
+::-webkit-scrollbar
+	{
+    	width: 0px;
+    	height: 0px;
+	}
