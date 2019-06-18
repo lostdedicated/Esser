@@ -12,8 +12,6 @@
 ();
 // jp fonts
 document.documentElement.lang = "ja"
-var rpint = setInterval (rp, 3000);
-
 var rpint = setInterval (rp, 1000);
 function rp()
 	{
