@@ -22,4 +22,27 @@ function rp()
 				clearInterval(rpint);
 			}
 		};
-		
+//ability tooltips
+var abilityTooltipInt = setInterval (abilityTooltip, 1000);		
+function abilityTooltip()
+	{
+		if (window.location.hash.substr(0, 5) !== "#raid")
+			{
+				clearInterval(abilityTooltipInt);
+			}
+			else
+			{
+				abilityTooltipArray = document.getElementsByClassName("lis-ability");
+				abilityTooltipArrayLength = abilityTooltipArray.length;
+				for (var i = 0; i < abilityTooltipArrayLength; i++)
+					{
+						abilityTooltipArrayDiv = abilityTooltipArray[i].getElementsByTagName("div");
+						abilityTooltipText = abilityTooltipArrayDiv[0].getAttribute("ability-name") + "\n" + abilityTooltipArrayDiv[0].getAttribute("text-data") + "\n" + "Duration: " + abilityTooltipArrayDiv[0].getAttribute("duration") + " turns" + "\n" + "Cooldown: " + abilityTooltipArrayDiv[0].getAttribute("recaset-default") + " turns";
+						abilityTooltipArrayDiv[0].setAttribute("title", abilityTooltipText)
+					}
+				if (abilityTooltipArray.length != 0) 
+				{
+					clearInterval(abilityTooltipInt);
+				}
+			}
+	}
