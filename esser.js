@@ -15,7 +15,10 @@ var rpint = setInterval (rp, 1000);
 function rp()
 	{
 		if (window.location.hash.substr(0, 7) !== "#result")
-			{clearInterval(rpint)} else 
+			{
+				clearInterval(rpint)
+			} 
+			else 
 			{
    				rankProgress = document.querySelector(".prt-exp-gauge-inner").style.width;
 				document.querySelector('.prt-rankup').innerHTML = rankProgress;
@@ -37,8 +40,17 @@ function abilityTooltip()
 				for (var i = 0; i < abilityTooltipArrayLength; i++)
 					{
 						abilityTooltipArrayDiv = abilityTooltipArray[i].getElementsByTagName("div");
-						abilityTooltipText = abilityTooltipArrayDiv[0].getAttribute("ability-name") + "\n" + abilityTooltipArrayDiv[0].getAttribute("text-data") + "\n" + "Duration: " + abilityTooltipArrayDiv[0].getAttribute("duration") + " turns" + "\n" + "Cooldown: " + abilityTooltipArrayDiv[0].getAttribute("recaset-default") + " turns";
-						abilityTooltipArrayDiv[0].setAttribute("title", abilityTooltipText)
+						if (abilityTooltipArrayDiv[0].getAttribute("text-data") != null)
+						{
+							if (abilityTooltipArrayDiv[0].getAttribute("duration"))
+							{
+								abilityTooltipText = abilityTooltipArrayDiv[0].getAttribute("ability-name") + "\n" + abilityTooltipArrayDiv[0].getAttribute("text-data").replace(/(<([^>]+)>)/ig,"") + "\n" + "Duration: " + abilityTooltipArrayDiv[0].getAttribute("duration") + " turns" + "\n" + "Cooldown: " + abilityTooltipArrayDiv[0].getAttribute("recaset-default") + " turns";
+							} else 
+							{
+								abilityTooltipText = abilityTooltipArrayDiv[0].getAttribute("ability-name") + "\n" + abilityTooltipArrayDiv[0].getAttribute("text-data").replace(/(<([^>]+)>)/ig,"") + "\n" + "Cooldown: " + abilityTooltipArrayDiv[0].getAttribute("recaset-default") + " turns";
+							}	
+						abilityTooltipArrayDiv[0].setAttribute("title", abilityTooltipText);
+						}
 					}
 				if (abilityTooltipArray.length != 0) 
 				{

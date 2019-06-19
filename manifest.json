@@ -2,7 +2,7 @@
     "content_scripts" : [
         {
         	"css": [ "styles.css" ],
-            "js":[ "jquery.js", "esser.js" ], 
+            "js":[ "esser.js" ], 
             "matches":[ "*://game.granbluefantasy.jp/*", "*://gbf.game.mbga.jp/*" ], 
             "run_at":"document_end"  
         }
