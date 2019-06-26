@@ -1,7 +1,7 @@
 { 
     "content_scripts" : [
         {
-        	"css": [ "styles.css" ],
+        	"css": [ "styles.css", "font.css", "sawarabi.css" ],
             "js":[ "esser.js" ], 
             "matches":[ "*://game.granbluefantasy.jp/*", "*://gbf.game.mbga.jp/*" ], 
             "run_at":"document_end"  

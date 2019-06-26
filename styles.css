@@ -45,3 +45,14 @@
     	width: 0px;
     	height: 0px;
 	}
+
+.prt-command-chara.anim-command-chara-show [class^="lis-character"], .anim-slide-command-right, .anim-slide-command-left
+	{
+   		animation-duration: 0.1s !important;
+	}
+/*
+	{
+    	transition-delay: 0.1s !important;
+    	transition-duration: 0.1s !important;
+	}
+	*/
